@@ -1,0 +1,93 @@
+@import 'colors.scss';
+.technical_wrap{
+  width: 100%;
+  height: 100%;
+  background: url("../images/bgImg/technicalHelp.png") no-repeat center;
+  background-size: cover;
+  position: relative;
+  .technical_center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    width: 80vw;
+    margin: 0 auto;
+    background-color: #fff;
+    padding-top: 30px;
+    .technical_center__header{
+      text-align: center;
+      small{
+        letter-spacing: 1em;
+      }
+      h3{
+        font-weight: normal;
+        font-size: 36px;
+        letter-spacing: 4px;
+        color: #484848;
+        position: relative;
+        &:after{
+          content: '';
+          width: 50px;
+          height: 2px;
+          background-color: $orange;
+          position: absolute;
+          left: 50%;
+          transform: translate3d(-50%,0,0);
+          bottom: -30%;
+        }
+      }
+    }
+    .technical_center__body{
+      width: 100%;
+      margin: 80px 0 auto;
+      ul{
+        width: 246px;
+        margin: 0 auto;
+        list-style: none;
+        li{
+          margin-bottom: 20px;
+          img{
+            width: 26px;
+            vertical-align: middle;
+          }
+          span{
+            vertical-align: middle;
+            display: inline-block;
+            margin-left: 12px;
+          }
+        }
+      }
+    }
+    .technical_center__footer{
+      img{
+        display: block;
+        width: 16vw;
+        margin: 10% auto;
+      }
+    }
+  }
+}
+.technical_page {
+  &.active {
+    .technical_center__footer {
+      img {
+        transition: all 1.5s ease;
+        transform: rotate(0deg);
+      }
+    }
+  }
+  &.fp-completely {
+    .technical_center__footer {
+      img {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
+
+.technicalCls{
+  display: block;
+}
+
+
+

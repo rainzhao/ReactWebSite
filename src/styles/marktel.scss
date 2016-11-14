@@ -1,0 +1,66 @@
+@import "./colors.scss";
+.telAlert{
+  display: none;
+}
+.marktel_wrap{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 10;
+  .marktel_center{
+    position: absolute;
+    z-index: 44;
+    background-color: #fff;
+    width: 68vw;
+    height: 30vh;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%,-50%,0);
+    text-align: center;
+    .marktel_content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      h3{
+        font-weight: normal;
+        font-size: 16px;
+        margin-top: 2vh;
+      }
+      p{
+        color: $orange;
+        font-size: 20px;
+        margin-top: 2vh;
+      }
+      .marktel_btn{
+        display: flex;
+        flex-direction: row;
+        padding: 0 2vh;
+        margin-top: 2vh;
+        button{
+          outline: none;
+          margin-top: 2vh;
+          flex: 1;
+          border: 1px solid #eee;
+          background-color: #fff;
+          height: 40px;
+          &:nth-child(2){
+            background-color: $orange;
+            color: #fff;
+            margin-left: 4px;
+          }
+          a{
+            text-decoration: none;
+            color: #fff;
+          }
+        }
+      }
+
+    }
+
+
+  }
+}

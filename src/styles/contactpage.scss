@@ -1,0 +1,112 @@
+@import './colors.scss';
+.contactCls{
+  display: block;
+}
+.contact_wrap{
+  background: url('../images/bgImg/bac-02.png') no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  .contact_center{
+    background-color: #fff;
+    position: absolute;
+    width: 80vw;
+    top: 50%;
+    left: 50%;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    transform: translate3d(-50%,-50%,0);
+
+    .contact_center__header{
+      text-align: center;
+      margin-top: 5vh;
+      h3{
+        font-weight: normal;
+        font-size: 36px;
+        position: relative;
+        color: #333333;
+        &:after{
+          display: block;
+          content: '';
+          width: 60px;
+          height: 2px;
+          background-color: $orange;
+          position: absolute;
+          left: 50%;
+          transform: translate3d(-50%,0,0);
+          margin-top: 10px;
+        }
+      }
+    }
+    .contact_center__body{
+      .contact_center__phone{
+        color: #484848;
+        margin-top: 3vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+          width: 24px;
+          vertical-align: middle;
+        }
+        strong{
+          font-size: 14px;
+          vertical-align: middle;
+        }
+        span{
+          font-size: 12px;
+          vertical-align: middle;
+
+        }
+      }
+      .contact_center__address{
+        font-size: 12px;
+        text-align: center;
+        margin-top: 2vh;
+        p{
+          margin-bottom: 1vh;
+        }
+        img{
+          vertical-align: middle;
+          width: 26px;
+        }
+        span{
+          vertical-align: middle;
+          margin-left: 8px;
+          margin-top: 2px;
+        }
+      }
+      .contact_center__code{
+        margin-top: 3vh;
+        text-align: center;
+        transition: all .5s ease;
+        img{
+          display: block;
+          width: 130px;
+          margin: 0 auto;
+        }
+        span{
+          font-size: 12px;
+        }
+        &:hover{
+          transform: scale(2) translate3d(0,-20%,0);
+        }
+      }
+    }
+  }
+  .contact_footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #333;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,175 @@
+
+
+.cando_wrap{
+  background: url("http://ofyi1vpax.bkt.clouddn.com/candoBg.png") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  .nav_header_wrap{
+    background-color: #fff;
+  }
+  .cando_center{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    .cando__cloud{
+      position: absolute;
+      width: 13vh;
+      height: 26vh;
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-50%,-50%,0);
+      img{
+        display: inline-block;
+        width: 40vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%,-50%,0);
+      }
+      &:after{
+        transition: all 6s ease;
+        position: absolute;
+        content: '我们能做';
+        display: inline-block;
+        left: 50%;
+        top: 46%;
+        transform: translate3d(-50%,-50%,0);
+        animation: fontAnimate 6s infinite ease forwards;
+        color: #fff;
+        font-size: 24px;
+        white-space: nowrap;
+      }
+    }
+    .cando__circle{
+      width: 120px;
+      height: 120px;
+      border-radius: 120px;
+      line-height: 120px;
+      text-align: center;
+      border: 1px solid #000;
+    }
+    @mixin commonCircles{
+      width: 110px;
+      height: 110px;
+      border-radius: 110px;
+      line-height: 110px;
+    }
+    .cando__one{
+      position: absolute;
+      left: 50%;
+      transform: translate3d(-50%,0,0);
+      top: -42vw;
+    }
+    .cando__two{
+      @include commonCircles;
+      position: absolute;
+      right: 18vh;
+      top: 18vh;
+    }
+    .cando__three{
+      @include commonCircles;
+      position: absolute;
+      transform: translate3d(-50%,0,0);
+      left: 50%;
+      top: 30vh;
+    }
+    .cando__four{
+      @include commonCircles;
+      position: absolute;
+      left: 18vh;
+      top: 18vh;
+    }
+  }
+}
+.circle_animate1{
+  animation: circleAnimate1 6s infinite  ease backwards;
+}
+.circle_animate2{
+  animation: circleAnimate2 6s infinite  ease backwards;
+}
+.circle_animate3{
+  animation: circleAnimate3 6s infinite  ease backwards;
+}
+.circle_animate4{
+  animation: circleAnimate4 6s infinite  ease backwards;
+}
+.circle_animate5{
+  animation: middleCircleAnimate 6s infinite ease backwards;
+}
+@keyframes circleAnimate1 {
+  0%{
+    transform: translate3d(-50%,-16%,0);
+  }
+  50%{
+    transform: translate3d(-50%,0,0);
+  }
+  100%{
+    transform: translate3d(-50%,-16%,0);
+  }
+}
+@keyframes circleAnimate2 {
+  0%{
+    transform: translate3d(-10%,0,0);
+  }
+  50%{
+    transform: translate3d(0%,0,0);
+  }
+  100%{
+    transform: translate3d(-10%,0,0);
+  }
+}
+@keyframes circleAnimate3 {
+  0%{
+    transform: translate3d(-50%,10%,0);
+  }
+  50%{
+    transform: translate3d(-50%,0%,0);
+  }
+  100%{
+    transform: translate3d(-50%,10%,0);
+  }
+}
+@keyframes circleAnimate4 {
+  0%{
+    transform: translate3d(10%,0,0);
+  }
+  50%{
+    transform: translate3d(0%,0,0);
+  }
+  100%{
+    transform: translate3d(10%,0,0);
+  }
+}
+@keyframes middleCircleAnimate {
+  0%{
+    transform: scale(1.1) translate3d(-50%,-50%,0);
+    transform-origin: -15% 50%;
+  }
+  50%{
+    transform: scale(1) translate3d(-50%,-50%,0);
+    transform-origin: -15% 50%;
+  }
+  100%{
+    transform: scale(1.1) translate3d(-50%,-50%,0);
+    transform-origin: -15% 50%;
+  }
+}
+
+@keyframes fontAnimate {
+  0%{
+    transform: scale(1.4) translate3d(-50%,-50%,0);
+    transform-origin: 0 50%;
+  }
+  50%{
+    transform: scale(1) translate3d(-50%,-50%,0);
+    transform-origin: 0 50%;
+  }
+  100%{
+    transform: scale(1.4) translate3d(-50%,-50%,0);
+    transform-origin: 0 50%;
+  }
+}
+
+

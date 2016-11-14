@@ -1,0 +1,98 @@
+/*首页样式*/
+@import "./colors";
+.homewrap{
+  background: url("../images/bgImg/bac-01_02.png") no-repeat center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  .navwrap{
+    position: absolute;
+    top: 0;
+    .nav_btn{
+      position: absolute;
+      left: 50%;
+      transform: translate3d(-50%,0,0);
+    }
+  }
+  .homewrap_main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    .homewrap_main__circleouter{
+      position: absolute;
+      left: 50%;
+      top: 10vh;
+      transform: translate3d(-50%,0,0);
+      width: 126vw;
+      height: 126vw;
+      border: 1px solid $orange;
+      border-radius: 50%;
+      padding: 50px;
+      .homewrap_main__circleinner{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: $orange;
+        border-radius: 50%;
+        opacity: 0.8;
+        display: flex;
+        align-items: center;
+        @mixin homepos{
+          position: absolute;
+          left: 50%;
+          transform: translate3d(-50%,0,0);
+        }
+        .homewrap_main__circleinner__logo{
+          @include homepos;
+          width: 40vw;
+          top: 8vw;
+        }
+        .homewrap_main__circleinner__des{
+          @include homepos;
+          width: 70vw;
+          top: 26vw;
+        }
+        .home_main__circleinner__essay{
+          @include homepos;
+          color: #fff;
+          text-align: center;
+          top: 54vw;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-size: 12px;
+          line-height: 1.4em;
+        }
+        .home_main__circleinner__dot{
+          background-color: #fff;
+          width: 3px;
+          height: 3px;
+          border-radius: 3px;
+          margin: 2px auto;
+        }
+      }
+      .home_main__circleouter__down{
+        position: absolute;
+        left: 50%;
+        transform: translate3d(-50%,0,0);
+        animation: down 2s infinite ease forwards;
+      }
+    }
+  }
+  @keyframes down {
+    0%{
+      transform: translate3d(-50%,10px,0);
+      opacity: 1;
+    }
+    50%{
+      transform: translate3d(-50%,60px,0);
+      opacity: 0.4;
+    }
+    100%{
+      transform: translate3d(-50%,10px,0);
+      opacity: 1;
+    }
+  }
+}

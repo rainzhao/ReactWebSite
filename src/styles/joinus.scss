@@ -1,0 +1,87 @@
+@import './colors.scss';
+.joinus_wrap{
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .joinus_body{
+    padding-top: 25px;
+    .joinus__img{
+      width: 100vw;
+      position: relative;
+      img{
+        display: block;
+        width: 30vw;
+        margin: 6vh auto 2vh;
+      }
+      &:after{
+        content: "工程师";
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 44%;
+        transform: translate3d(-50%,-50%,0);
+        color: #fff;
+        font-size: 22px;
+      }
+    }
+    h3{
+      text-align: center;
+      font-size: $headerSize;
+      font-weight: normal;
+      position: relative;
+      &:after{
+        content: '';
+        display: inline-block;
+        width: 50px;
+        height: 2px;
+        background-color: $orange;
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        transform: translate3d(-50%,0,0);
+      }
+    }
+
+    .joinus_listwrap{
+      width: 90vw;
+      margin: 0 auto;
+      .joinus_list{
+        position: relative;
+        padding-left: 26px;
+        margin-bottom: 4vh;
+        &:before{
+          content: '';
+          display: inline-block;
+          background: url('http://ofyi1vpax.bkt.clouddn.com/joinus.png') top center no-repeat;
+          width: 40px;
+          height: 100%;
+          position: absolute;
+          left: -10px;
+          top: 0;
+        }
+        .joinus_list__img{
+          width: 40px;
+          margin-left: 10px;
+          img{
+            width: 24px;
+          }
+        }
+
+        .joinus_list__content{
+          h4{
+            font-weight: normal;
+            font-size: 20px;
+            margin-bottom: 2vh;
+          }
+          span{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+}

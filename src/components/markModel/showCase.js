@@ -25,7 +25,7 @@ class ShowCaseComponent extends React.Component{
     };
     const settings ={
       dots: false,
-      infinite: true,
+      infinite: false,
       speed: 500,
       touchMove: true,
       afterChange: _afterChange,
